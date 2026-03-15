@@ -68,10 +68,10 @@ function ProductDropdown({ products, value, onChange }) {
           style={{
             position: 'fixed', top: rect.bottom + 6, left: rect.left,
             width: rect.width, zIndex: 9999,
-            background: 'rgba(8,4,32,0.98)',
-            border: '1.5px solid rgba(139,92,246,0.55)',
+            background: 'rgba(8,12,28,0.98)',
+            border: '1.5px solid rgba(99,102,241,0.45)',
             borderRadius: 16,
-            boxShadow: '0 12px 48px rgba(0,0,0,0.8), 0 0 0 1px rgba(139,92,246,0.15), 0 0 30px rgba(139,92,246,0.12)',
+            boxShadow: '0 12px 48px rgba(0,0,0,0.75), 0 0 0 1px rgba(99,102,241,0.12)',
             overflow: 'hidden',
           }}
         >

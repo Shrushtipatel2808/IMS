@@ -50,11 +50,11 @@ function AutocompleteInput({ value, onChange, onSelect, suggestions, placeholder
         width: rect.width,
         zIndex: 99999,
         maxHeight: '260px',
-        background: 'rgba(10, 6, 40, 0.97)',
-        backdropFilter: 'blur(20px)',
-        border: '1px solid rgba(139,92,246,0.4)',
+        background: 'rgba(8, 12, 28, 0.97)',
+        backdropFilter: 'blur(24px)',
+        border: '1px solid rgba(99,102,241,0.35)',
         borderRadius: '16px',
-        boxShadow: '0 20px 60px rgba(2,0,20,0.7), 0 0 0 1px rgba(139,92,246,0.15)',
+        boxShadow: '0 20px 60px rgba(0,0,0,0.7), 0 0 0 1px rgba(99,102,241,0.12)',
         overflowY: 'auto',
       }}
     >

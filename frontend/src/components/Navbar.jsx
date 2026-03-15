@@ -73,7 +73,7 @@ function NotificationsPanel({ onClose }) {
   }, []);
 
   return (
-    <div style={{ background: 'rgba(8,4,32,0.97)', border: '1.5px solid rgba(139,92,246,0.35)', borderRadius: 20, boxShadow: '0 16px 64px rgba(0,0,0,0.8)', width: 340, overflow: 'hidden' }}>
+    <div style={{ background: 'rgba(8,12,28,0.97)', border: '1.5px solid rgba(99,102,241,0.35)', borderRadius: 20, boxShadow: '0 16px 64px rgba(0,0,0,0.75)', width: 340, overflow: 'hidden' }}>
       <div className="flex items-center justify-between px-4 py-3 border-b border-white/8">
         <div className="flex items-center gap-2">
           <Bell className="w-4 h-4 text-violet-300" />
@@ -120,7 +120,7 @@ function SecureSessionPanel({ onClose }) {
   const minutesLeft = expiry ? Math.max(0, Math.floor((expiry - Date.now()) / 60000)) : null;
 
   return (
-    <div style={{ background: 'rgba(8,4,32,0.97)', border: '1.5px solid rgba(34,211,238,0.35)', borderRadius: 20, boxShadow: '0 16px 64px rgba(0,0,0,0.8)', width: 300, overflow: 'hidden' }}>
+    <div style={{ background: 'rgba(8,12,28,0.97)', border: '1.5px solid rgba(34,211,238,0.3)', borderRadius: 20, boxShadow: '0 16px 64px rgba(0,0,0,0.75)', width: 300, overflow: 'hidden' }}>
       <div className="flex items-center justify-between px-4 py-3 border-b border-white/8">
         <div className="flex items-center gap-2">
           <Shield className="w-4 h-4 text-cyan-300" />
@@ -255,7 +255,7 @@ export default function Navbar() {
             </motion.div>
           </div>
           <DropPanel anchorRef={userRef} open={openPanel === 'user'} onClose={() => setOpenPanel(null)} align="right">
-            <div style={{ background: 'rgba(8,4,32,0.97)', border: '1.5px solid rgba(139,92,246,0.35)', borderRadius: 20, boxShadow: '0 16px 64px rgba(0,0,0,0.8)', width: 240, overflow: 'hidden' }}>
+            <div style={{ background: 'rgba(8,12,28,0.97)', border: '1.5px solid rgba(99,102,241,0.35)', borderRadius: 20, boxShadow: '0 16px 64px rgba(0,0,0,0.75)', width: 240, overflow: 'hidden' }}>
               {/* User info */}
               <div className="px-4 py-4 border-b border-white/8">
                 <div className="flex items-center gap-3">

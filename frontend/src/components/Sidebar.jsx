@@ -36,22 +36,22 @@ export default function Sidebar() {
       className="hidden lg:flex w-[270px] shrink-0 p-4"
     >
       <div className="glass-card rounded-[24px] p-4 h-full flex flex-col">
-        <div className="relative overflow-hidden rounded-[20px] p-4 border border-white/10 bg-white/[0.03]">
-          <div className="absolute -right-8 -top-8 h-20 w-20 rounded-full bg-[#8b5cf6]/35 blur-2xl" />
-          <div className="absolute -left-6 -bottom-6 h-16 w-16 rounded-full bg-[#22d3ee]/25 blur-2xl" />
+        <div className="relative overflow-hidden rounded-[20px] p-4 border border-white/[0.08] bg-gradient-to-br from-[#6366f1]/15 to-[#8b5cf6]/10">
+          <div className="absolute -right-6 -top-6 h-16 w-16 rounded-full bg-[#6366f1]/30 blur-2xl" />
+          <div className="absolute -left-4 -bottom-4 h-12 w-12 rounded-full bg-[#22d3ee]/20 blur-2xl" />
 
           <div className="flex items-center gap-3 relative z-10">
-            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#8b5cf6] to-[#22d3ee] flex items-center justify-center shadow-lg shadow-[#8b5cf6]/35 pulse-neon">
-              <Sparkles className="w-6 h-6" />
+            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#6366f1] to-[#8b5cf6] flex items-center justify-center shadow-lg shadow-[#6366f1]/40 pulse-neon">
+              <Sparkles className="w-6 h-6 text-white" />
             </div>
             <div>
-              <p className="text-[10px] uppercase tracking-[0.24em] text-white/50 font-semibold">InvenFlow</p>
-              <p className="text-lg font-black text-white neon-text">Neon Ops</p>
+              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 font-semibold">InvenFlow</p>
+              <p className="text-lg font-black text-white neon-text">CoreInventory</p>
             </div>
           </div>
         </div>
 
-        <nav className="mt-4 rounded-[20px] border border-white/10 bg-white/[0.02] p-2.5 space-y-1.5">
+        <nav className="mt-4 rounded-[20px] border border-white/[0.07] bg-white/[0.025] p-2.5 space-y-1">
           {navItems.map((item) => {
             const Icon = item.icon;
             return (
@@ -59,10 +59,10 @@ export default function Sidebar() {
                 key={item.to}
                 to={item.to}
                 className={({ isActive }) =>
-                  `flex items-center gap-3 px-3 py-3 rounded-2xl transition-all relative overflow-hidden group ${
+                  `flex items-center gap-3 px-3 py-2.5 rounded-2xl transition-all relative overflow-hidden group ${
                     isActive
-                      ? 'text-white bg-white/5'
-                      : 'text-white/65 hover:text-white hover:bg-white/[0.04]'
+                      ? 'text-white bg-gradient-to-r from-[#6366f1]/20 to-[#8b5cf6]/15'
+                      : 'text-white/60 hover:text-white hover:bg-white/[0.05]'
                   }`
                 }
               >
@@ -72,15 +72,15 @@ export default function Sidebar() {
                       <motion.span
                         layoutId="nav-active-line"
                         transition={{ type: 'spring', stiffness: 320, damping: 28 }}
-                        className="absolute left-1 top-1/2 -translate-y-1/2 h-8 w-1 rounded-full bg-gradient-to-b from-[#8b5cf6] to-[#22d3ee]"
+                        className="absolute left-1 top-1/2 -translate-y-1/2 h-6 w-1 rounded-full bg-gradient-to-b from-[#6366f1] to-[#8b5cf6]"
                       />
                     )}
-                    <Icon className={`w-5 h-5 ${isActive ? 'text-[#22d3ee]' : 'text-white/55 group-hover:text-[#8b5cf6]'}`} />
-                    <span className="text-sm font-semibold tracking-wide">{item.label}</span>
+                    <Icon className={`w-4.5 h-4.5 shrink-0 ${isActive ? 'text-[#a5b4fc]' : 'text-white/40 group-hover:text-[#a5b4fc]'}`} />
+                    <span className="text-sm font-medium tracking-wide">{item.label}</span>
                     {isActive && (
                       <motion.span
                         layoutId="nav-active-glow"
-                        className="absolute inset-0 rounded-2xl border border-[#8b5cf6]/45"
+                        className="absolute inset-0 rounded-2xl border border-[#6366f1]/30"
                       />
                     )}
                   </>
@@ -90,23 +90,23 @@ export default function Sidebar() {
           })}
         </nav>
 
-        <div className="mt-auto rounded-[20px] border border-white/10 bg-white/[0.03] p-4 space-y-3">
+        <div className="mt-auto rounded-[20px] border border-white/[0.07] bg-white/[0.025] p-4 space-y-3">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-[#22d3ee]/30 to-[#8b5cf6]/30 flex items-center justify-center">
-              <Settings className="w-5 h-5 text-[#22d3ee]" />
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#6366f1]/25 to-[#8b5cf6]/25 flex items-center justify-center">
+              <Settings className="w-4 h-4 text-[#a5b4fc]" />
             </div>
             <div>
-              <p className="text-sm font-semibold text-white">Workspace Quantum+</p>
-              <p className="text-xs text-white/55">Premium automations enabled</p>
+              <p className="text-sm font-semibold text-white/90">Workspace Pro</p>
+              <p className="text-xs text-white/45">All features enabled</p>
             </div>
           </div>
 
           <motion.button
             whileHover={{ scale: 1.02, y: -1 }}
             whileTap={{ scale: 0.98 }}
-            className="w-full btn-primary rounded-2xl px-4 py-3 text-sm font-semibold"
+            className="w-full btn-primary rounded-2xl px-4 py-2.5 text-sm font-semibold"
           >
-            Upgrade Workspace
+            Upgrade Plan
           </motion.button>
         </div>
       </div>

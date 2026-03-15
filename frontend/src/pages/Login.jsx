@@ -173,7 +173,7 @@ function SignUpScreen({ onBack, login }) {
         </button>
         <div>
           <h2 className="text-2xl font-black text-white">Create account</h2>
-          <p className="text-white/50 text-sm">Join InvenFlow Neon Ops</p>
+          <p className="text-white/50 text-sm">Join CoreInventory</p>
         </div>
       </div>
       {error && <Alert msg={error} />}
@@ -327,7 +327,7 @@ export default function Login() {
           </div>
           <div>
             <p className="text-[10px] uppercase tracking-[0.24em] text-white/50 font-semibold">InvenFlow</p>
-            <p className="text-lg font-black text-white neon-text">Neon Ops</p>
+            <p className="text-lg font-black text-white neon-text">CoreInventory</p>
           </div>
         </div>
 
